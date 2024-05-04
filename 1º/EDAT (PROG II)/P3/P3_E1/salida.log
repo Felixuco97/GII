@@ -1,0 +1,10 @@
+Adding: [200, Valladolid, 0, 0] to delivery: castilla_y_leon
+Adding: [100, Burgos, 0, 0] to delivery: castilla_y_leon
+Adding: [400, Salamanca, 0, 0] to delivery: castilla_y_leon
+Adding: [550, Leon, 0, 0] to delivery: castilla_y_leon
+Running delivery plan for queue: 
+[200, Valladolid, 0, 0][100, Burgos, 0, 0][400, Salamanca, 0, 0][550, Leon, 0, 0]
+Delivering vacuna_pfizer requested by  to [200, Valladolid, 0, 0]
+Delivering vacuna_pfizer requested by  to [100, Burgos, 0, 0]
+Delivering vacuna_pfizer requested by  to [400, Salamanca, 0, 0]
+Delivering vacuna_pfizer requested by  to [550, Leon, 0, 0]

@@ -1,0 +1,8 @@
+SIZE: 10
+4.20 9.75 8.00 9.50 6.50 5.00 7.30 2.50 9.20 9.50 
+Finished inserting. Now we extract from the beginning and insert in order:
+4.20 9.75 8.00 9.50 6.50 
+Now we extract from the end and insert in order:
+9.50 9.20 2.50 7.30 5.00 
+SIZE: 10
+2.50 4.20 5.00 6.50 7.30 8.00 9.20 9.50 9.50 9.75 

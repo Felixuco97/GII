@@ -1,0 +1,213 @@
+<diagram program="umletino" version="15.1"><zoom_level>8</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>216</x><y>568</y><w>168</w><h>176</h></coordinates><panel_attributes>Sala
+--
+-nombre: String
+-dimensiones: Dim
+-aforo: int
+-tomasCorriente: int
+-temperatura: double
+-humedad: double
+
+--
++divisiónSalas(): int
++añadirObra(Obra o): void
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>496</x><y>528</y><w>168</w><h>168</h></coordinates><panel_attributes>/Exposición/
+--
+-nombre: String
+-descripcion: String
+-fechaInicio: Date
+-fechaFin: Date
+-precioEntradas: double
+-descuento: Descuento
+--
++cancelarExposicion(): void
++prorrogarExposicion(): void
++configurarDescuento(): void
++calcularDuración():Time
++añadirObra(Obra o): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>144</x><y>704</y><w>104</w><h>104</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=2..*</panel_attributes><additional_attributes>110;50;110;110;10;110;10;10;90;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>864</x><y>856</y><w>168</w><h>168</h></coordinates><panel_attributes>/Obra/
+--
+-autor: int
+-material: String
+-seguro: Seguro
+-dimensiones: Dim
+-condiciónTemp: Rango
+-condicionHumedad: Rango
+-dueño: String
+-sala: String
+-estado: TipoEstado
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>296</x><y>408</y><w>184</w><h>176</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes><additional_attributes>210;10;10;10;10;200</additional_attributes></element><element><id>Relation</id><coordinates><x>568</x><y>464</y><w>40</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>728</x><y>408</y><w>248</w><h>464</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes><additional_attributes>10;10;270;10;270;560</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1032</x><y>520</y><w>112</w><h>56</h></coordinates><panel_attributes>/Usuario/
+--
+
+--
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1256</x><y>776</y><w>168</w><h>104</h></coordinates><panel_attributes>Usuario no registrado
+--
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1536</x><y>600</y><w>168</w><h>88</h></coordinates><panel_attributes>Cliente
+--
+-preferenciaNotificaciones: boolean
+--
++permitirNotificaciones(): void
++comprarEntradas(): boolean
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1536</x><y>736</y><w>168</w><h>112</h></coordinates><panel_attributes>Empleado
+--
+-numeroSegSoc: String
+-numeroCuenta: String
+-dirección: String
+-permiso: List&lt;String&gt;
+--
++permisosEmpleados():
++modificarContraseñas():
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1536</x><y>872</y><w>168</w><h>104</h></coordinates><panel_attributes>Gestor
+--
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1416</x><y>648</y><w>136</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;150;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1416</x><y>672</y><w>136</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;10;110;160;150;160</additional_attributes></element><element><id>Relation</id><coordinates><x>1416</x><y>712</y><w>136</w><h>216</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;10;90;250;150;250</additional_attributes></element><element><id>Relation</id><coordinates><x>1120</x><y>568</y><w>152</w><h>88</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;11;91;170;90</additional_attributes></element><element><id>Relation</id><coordinates><x>1040</x><y>568</y><w>232</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;11;331;270;330</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1280</x><y>912</y><w>168</w><h>96</h></coordinates><panel_attributes>Estadísticas
+--
+-numeroEntradasVendidas: int
+-beneficios: double
+-detalleEstadísticas:
+--
++desglosarPorDia(): void
++desglosarPorExposición(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1256</x><y>600</y><w>168</w><h>152</h></coordinates><panel_attributes>Usuario registrado
+--
+-nombre: String
+-nif: String
+-contraseña: String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>1056</y><w>168</w><h>136</h></coordinates><panel_attributes>Sorteo
+--
+-descripción: String
+-numeroEntradasSorteo: int
+-fechaSorteo: Date
+-apuntarse: FechaApuntarse
+--
++ganadorSorteo(): List&lt;String&gt;
++apuntarseSorteo():  void
++realizarSorteo(): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>464</x><y>368</y><w>272</w><h>104</h></coordinates><panel_attributes>Centro de exposiciones
+--
+-horaApertura:Time
+-horaCierre:Time
+--
++configurarHorario(): void
++calcularJornada(): Integer</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>648</x><y>944</y><w>200</w><h>96</h></coordinates><panel_attributes>Entrada
+--
+-descripción: String
+-fechaHora: DateTime
+-codigo: String
+--
++reservarEntradasSorteo(): List&lt;Entradas&gt;</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1800</x><y>760</y><w>168</w><h>80</h></coordinates><panel_attributes>Notificación
+--
+-tipoNotificacion: Tipos Notificacion
+-contenido: String
+-destinatario: String
+--
++mostrarNotificaciones(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1816</x><y>904</y><w>112</w><h>96</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Tipos Notificación
+--
+Sorteo
+Descuento
+Nueva Exposición
+Cancelación Exposicion
+GanadorSorteo
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>568</x><y>688</y><w>88</w><h>328</h></coordinates><panel_attributes>lt=&lt;-
+m1=1..n</panel_attributes><additional_attributes>100;380;19;376;20;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>752</x><y>1112</y><w>88</w><h>72</h></coordinates><panel_attributes>Escultura
+--
+-material: String
+-técnica: String
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>856</x><y>1112</y><w>104</w><h>72</h></coordinates><panel_attributes>Montaje audiovisual
+--
+-duración: Time
+-idioma: String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>976</x><y>1112</y><w>104</w><h>72</h></coordinates><panel_attributes>Fotografías
+--
+-técnica: String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1096</x><y>1112</y><w>104</w><h>72</h></coordinates><panel_attributes>Cuadros
+--
+-técnica: String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1104</x><y>936</y><w>80</w><h>56</h></coordinates><panel_attributes>Rango
+--
+-inicio: int
+-fin: int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>776</x><y>1016</y><w>128</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>140;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>904</x><y>1016</y><w>48</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>40;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>1016</y><w>72</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;120</additional_attributes></element><element><id>Relation</id><coordinates><x>1000</x><y>1016</y><w>168</w><h>112</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;190;120</additional_attributes></element><element><id>Relation</id><coordinates><x>1024</x><y>920</y><w>96</w><h>64</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;60;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1872</x><y>832</y><w>24</w><h>88</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1104</x><y>872</y><w>80</w><h>56</h></coordinates><panel_attributes>Dim
+--
+-x: double
+-y: double
+-z: double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1024</x><y>888</y><w>96</w><h>56</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>376</x><y>616</y><w>144</w><h>32</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes><additional_attributes>156;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1440</x><y>944</y><w>112</w><h>24</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1696</x><y>792</y><w>120</w><h>24</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1696</x><y>664</y><w>200</w><h>112</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+</panel_attributes><additional_attributes>10;20;230;20;230;120</additional_attributes></element><element><id>Relation</id><coordinates><x>552</x><y>688</y><w>24</w><h>384</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;460;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>912</x><y>1208</y><w>168</w><h>80</h></coordinates><panel_attributes>Descuento
+--
+-tipoDescuento: Tipo
+-porcentaje: double
+-condición: Condición</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1144</x><y>1224</y><w>104</w><h>56</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Condición
+--
+Cliente frecuente
+Compra anticipada</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1072</x><y>1240</y><w>88</w><h>24</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>104</x><y>496</y><w>1016</w><h>400</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>1250;480;1130;390;1130;10;10;10;10;170;140;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>976</x><y>200</y><w>80</w><h>56</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Status
+--
+Ok
+Error
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>704</x><y>224</y><w>288</w><h>24</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>340;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1096</x><y>1000</y><w>112</w><h>56</h></coordinates><panel_attributes>Seguro
+--
+-numeroSeguro: int
+-precioSeguro: double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1024</x><y>944</y><w>88</w><h>88</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>90;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>1144</y><w>88</w><h>72</h></coordinates><panel_attributes>FechaApuntarse
+--
+-inicio: Date
+-fin: Date
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>1120</y><w>56</w><h>72</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;70;10;10</additional_attributes></element><element><id>Text</id><coordinates><x>1880</x><y>736</y><w>80</w><h>24</h></coordinates><panel_attributes>notificaciones</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>856</x><y>832</y><w>40</w><h>24</h></coordinates><panel_attributes>obras</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>392</x><y>632</y><w>80</w><h>24</h></coordinates><panel_attributes>salas</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>200</x><y>920</y><w>128</w><h>176</h></coordinates><panel_attributes>Note..
+bg=black
+canjear codigo entradas
+penalizacion
+mirar estadisticas</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>704</x><y>168</y><w>440</w><h>368</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n\nusuarios</panel_attributes><additional_attributes>480;440;480;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>744</x><y>472</y><w>888</w><h>488</h></coordinates><panel_attributes>lt=&lt;-
+m1=entradas\n0..n</panel_attributes><additional_attributes>10;590;10;10;1090;10;1090;160</additional_attributes></element><element><id>Relation</id><coordinates><x>384</x><y>672</y><w>544</w><h>584</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>660;710;10;710;10;10;140;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>408</x><y>776</y><w>128</w><h>80</h></coordinates><panel_attributes>Temporal
+--
+
+
+--
++cerrarExposición():void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>312</x><y>736</y><w>568</w><h>176</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes><additional_attributes>10;10;10;190;690;190</additional_attributes></element><element><id>Text</id><coordinates><x>824</x><y>864</y><w>80</w><h>24</h></coordinates><panel_attributes>obras</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>176</x><y>688</y><w>80</w><h>24</h></coordinates><panel_attributes>salas</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>688</y><w>72</w><h>104</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;70;70;10;70;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>688</y><w>72</w><h>104</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70;70;70;70;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>776</y><w>128</w><h>80</h></coordinates><panel_attributes>Permanente
+--
+
+
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>272</x><y>544</y><w>80</w><h>24</h></coordinates><panel_attributes>salas</panel_attributes><additional_attributes></additional_attributes></element><element><id>Text</id><coordinates><x>912</x><y>832</y><w>40</w><h>24</h></coordinates><panel_attributes>obras</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>616</y><w>272</w><h>256</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1..n</panel_attributes><additional_attributes>10;10;300;10;300;300</additional_attributes></element><element><id>UMLClass</id><coordinates><x>488</x><y>64</y><w>224</w><h>256</h></coordinates><panel_attributes>Sistema
+--
++iniciarSesion(): Status
++cerrarSesion(): Status
++buscar(): Status
++registrarse(): Status
++comprarEntradas(): Status
++enviarNotificacion(): Status
++venderEntradas(): Status
++generarPdf(): Status
++identificarUsuario(): Usuario
++comprobarPermisos(): Status
++comprobarCredenciales(): Status
++compatibilidadObraSala(): Status
++compatibilidadObraExposición(): Status
++limiteCancelaciónExpo(): Status
++sortearEntrada():Status
++aplicarDescuento(): Status
++darDeAltaEmpleado(Empleado e): void
++registrarse(String nombre, String NIF, String contraseña)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>592</x><y>312</y><w>24</w><h>72</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element></diagram>
