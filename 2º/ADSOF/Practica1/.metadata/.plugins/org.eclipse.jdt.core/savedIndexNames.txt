@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/home/felix/ASIGNATURAS_DGIIM/ADSOF/Prácticas/Práctica1/.metadata/.plugins/org.eclipse.jdt.core
+1418079453.index
+1865797976.index
+1638037306.index

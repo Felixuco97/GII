@@ -1,0 +1,14 @@
+public double adeudo(List<Compra> compras, Plan plan, Acto acto, int mes){
+
+	double precio = 0;
+	
+	for(compra: compras)
+		if(compra.obtenerMes().equals(mes))
+			for(libro: compra.obtenerLibros())
+				precio += libro.obtenerPrecio();
+	
+	precio += acto.obtenerPrecio();
+	precio += plan.obtenerPrecio();
+
+	return precio;
+}

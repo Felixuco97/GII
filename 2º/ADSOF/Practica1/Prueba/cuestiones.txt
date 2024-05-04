@@ -1,0 +1,35 @@
+Apartado 3:
+	Se ejecuta el programa LongitudPalabras.java:
+	1) Sin parámetros: la consola indica que se debe introducir al menos una palabra por parámetro
+	2) Con uno o más parámetros
+		2.1) Sin la palabra "No_almacenada": muestra las longitudes de las palabras indicando su nombre y su número de caracteres, pero la longitud de 'No_almacenada' la pone como -1
+		     aunque no sea así porque no está dentro del grupo de palabras
+		2.2) Con la palabra "No_almacenada": muestra las longitudes de las palabras indicando su nombre y su número de caracteres, incluyendo la palabra 'No_almacenada' a parte porque
+		     está dentro del grupo de palabras
+Apatado 4:
+	- ¿Qué estrategia he seguido para el cálculo de las frecuencias?
+		He creado un HashSet como indicaba la práctica para almacenar las longitudes	
+		una sola vez. Después he creado a parte un diccionario con HashMap con una
+		clave (longitud) y un valor (frecuencia). Con la funcion diccionario() se recorren
+		todas las longitudes y se almacenan en el diccionario indicando las veces que
+		aparecen. En este caso, la frecuencia se calcula verificando si la palabra como
+		clave ya se había insertado en el diccionario.
+	- ¿Qué otras alternativas se te ocurren para ese cálculo?
+		Ninguna más
+	-¿Cómo implementarías un método getLongitudesRepetidas que devuelva las longitudes de las
+	palabras que se repiten al menos una vez?
+		Implementaría un método como el siguiente:
+		
+		public void repetidas() {
+			for(int i=0;i<this.longitudes.size();i++) {
+				for(int j=0;j<i;j++) {
+					if(this.longitudes.get(i).equals(this.longitudes.get(j)))
+						this.longitudesRepetidas.add(this.longitudes.get(i));
+				}
+			}
+		}
+		
+		- El bucle for al estilo C: empezaría recorriendo las longitudes y, para cada una
+		de ellas, con otro bucle se comprobaría si se repite y, en caso de que suceda, la
+		longitud se añadería a la lista de longitudes repetidas
+	

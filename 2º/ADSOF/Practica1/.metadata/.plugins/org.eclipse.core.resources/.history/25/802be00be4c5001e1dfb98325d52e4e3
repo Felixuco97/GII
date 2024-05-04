@@ -1,0 +1,9 @@
+package ejercicio;
+
+public class HolaMundopp {
+
+	public static void main(String[] args) {
+
+	}
+
+}

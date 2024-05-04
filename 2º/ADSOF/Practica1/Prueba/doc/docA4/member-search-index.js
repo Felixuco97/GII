@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"apartado4","c":"FrecuenciaPalabras","l":"FrecuenciaPalabras()","url":"%3Cinit%3E()"},{"p":"apartado4","c":"FrecuenciaPalabras","l":"main(String[])","url":"main(java.lang.String[])"}]

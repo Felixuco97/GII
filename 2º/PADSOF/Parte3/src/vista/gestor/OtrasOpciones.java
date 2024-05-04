@@ -1,0 +1,86 @@
+package vista.gestor;
+
+import java.awt.event.*;
+import javax.swing.*;
+
+import modelo.sistema.Sistema;
+
+import java.awt.*;
+/**
+ * @author Felix López,Fernando Sanchez y Andrés M. Alonso
+ */
+public class OtrasOpciones extends JPanel{
+    
+
+    private JPanel panelSuperior;
+    private JLabel label1;
+
+    private JPanel panelMedio;
+    private JButton button1;
+    private JButton button2;
+
+
+
+    private JPanel panelInferior;
+    private JButton atras;
+
+    public OtrasOpciones(Sistema sistema){
+
+        /*Establecemos layout de este panel */
+        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+
+        /*PANEL SUPERIOR */
+        panelSuperior = new JPanel();
+        label1 = new JLabel("OTRAS  OPCIONES");
+        Font font = new Font(Font.MONOSPACED, Font.BOLD, 28);
+        label1.setFont(font);
+        panelSuperior.add(label1);
+
+        //PANEL MEDIO
+        panelMedio = new JPanel();
+        panelMedio.setLayout(new GridLayout(0, 1));
+
+        button1 = new JButton("Configuracion de sorteos");
+        button2 = new JButton("Configuracion de descuentos");
+
+        panelMedio.add(button1);
+        panelMedio.add(button2);
+
+        //PANEL INFERIOR
+        panelInferior = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        atras = new JButton("Atras");
+
+        panelInferior.add(atras);
+
+        //AÑADIMOS SUBPANELES
+        this.add(panelSuperior);
+        this.add(panelMedio);
+        this.add(panelInferior);
+
+
+
+    }
+
+    public void setControlador(ActionListener c){
+        button1.addActionListener(c);
+        button2.addActionListener(c);
+        atras.addActionListener(c);
+    }
+
+    public JButton getControladorSorteo(){
+        return  button1;
+    }
+
+    public JButton getControladorDescuento(){
+        return  button2;
+    }
+  
+     public JButton getControladorAtras(){
+        return atras;
+    }
+
+    public void update(){
+        button1.grabFocus();
+    }
+    
+}

@@ -1,0 +1,5 @@
+TIPO;NOMBRE;DESCRIPCION;FECHA_INIC;FECHA_FIN;NUM_ENTRADAS;PRECIO;ESTADO;DESC_TIPO;PORCENTAJE;VISTAS;NUM_DIAS;DIAS_ANTELACION;CONTENIDO
+PERMANENTE;El impresionismo;Cuadros de Van Gogh;2024-04-05;;100;3.7;EN_CURSO;FRECUENTE;0.4;10;30;;Sala1:El beso|Guernika;Sala2:Autorretrato con mono
+TEMPORAL;El cine del pasado;Cine de culto;2024-03-02;2024-09-03;80;10;EN_CURSO;;;;;;Sala4:Sun in your head;Sala4-1:Deserts
+TEMPORAL;Exposcion Externa;Escultura;2023-01-01;2024-10-11;25;5;CIERRE_TEMPORAL;ANTICIPADA;0.6;;;20;Sala5:For the love of God|Elogio de la luz xvi
+PERMANENTE;Exposicion de primavera;Fotos antiguas;2024-04-05;;70;15;EN_CURSO;;;;;;Sala3:Muerte de un miliciano;Sala3-1:V-J day in Times Square
