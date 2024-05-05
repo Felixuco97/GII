@@ -1,5 +1,13 @@
 package Codigo_registration;
 
+/**
+ * Clase que gestiona estados para objetos de cualquier clase y guarda un
+ * registro de su trayectoria.
+ * 
+ * @author Felix felix.lopezl@estudiante.uam.es
+ * @author Alex alex.pinneiro@estudiante.uam.es
+ */
+
 public class Registration{
 	
 	private String name, affiliation;

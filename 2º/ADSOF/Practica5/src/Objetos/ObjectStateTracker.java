@@ -92,6 +92,8 @@ public class ObjectStateTracker<T,S extends Comparable<S>>{
      */
     public void setObject(T t){
     	S current = getObjectState(t);
+        stateRegs.put(elseCondition, this.removeObjectFromMap(stateRegs.get(elseCondition), t));
+        
         for(S s : mapConditions.keySet()){
 
             if(mapConditions.get(s).test(t) == true){
