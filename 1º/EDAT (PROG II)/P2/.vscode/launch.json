@@ -19,8 +19,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/felix/EDAT (PROG II)/material_p2",
-      "program": "/home/felix/EDAT (PROG II)/material_p2/build/Debug/outDebug",
+      "cwd": "/home/felix/FÉLIX/GII/1º/EDAT (PROG II)/P2",
+      "program": "/home/felix/FÉLIX/GII/1º/EDAT (PROG II)/P2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

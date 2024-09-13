@@ -5,7 +5,7 @@
       "type": "lldb",
       "request": "launch",
       "name": "Debug",
-      "program": "${workspaceFolder}/p3_e1",
+      "program": "${workspaceFolder}/p1_e2",
       "args": [],
       "cwd": "${workspaceFolder}"
     },
@@ -16,8 +16,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/felix/EDAT (PROG II)/Material_P3/P3_E1",
-      "program": "/home/felix/EDAT (PROG II)/Material_P3/P3_E1/build/Debug/outDebug",
+      "cwd": "/home/felix/FÉLIX/GII/1º/EDAT (PROG II)/P1",
+      "program": "/home/felix/FÉLIX/GII/1º/EDAT (PROG II)/P1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
