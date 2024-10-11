@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>CaminoTester.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">src (24 sept 2024 19:08:29)</a> &gt; <a href="../../index.html" class="el_group">explorador</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">explorador.test</a> &gt; <span class="el_source">CaminoTester.java</span></div><h1>CaminoTester.java</h1><pre class="source lang-java linenums">package explorador.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import explorador.*;
+
+<span class="fc" id="L7">public class CaminoTester {</span>
+	private int costePrevio;
+	@Test
+	public void getCosteTotal() {
+<span class="fc" id="L11">		costePrevio = Camino.getCosteTotal();</span>
+		
+<span class="fc" id="L13">		Camino.setCoste(0);</span>
+		
+<span class="fc" id="L15">		Posada p1 = new Posada(&quot;Supermercado&quot;, 7);</span>
+		
+<span class="fc" id="L17">		Posada p2 = new Posada(&quot;Hotel&quot;, 8);</span>
+		
+<span class="fc" id="L19">		Posada p3 = new Posada(&quot;Bar&quot;, 5);</span>
+		
+<span class="fc" id="L21">		Posada p4 = new Posada(&quot;Lonja&quot;, 6);</span>
+		
+<span class="fc" id="L23">		Camino c1 = new Camino(p1, p2, 6);</span>
+		
+<span class="fc" id="L25">		Camino c2 = new Camino(p2, p3, 4);</span>
+		
+<span class="fc" id="L27">		Camino c3 = new Camino(p3, p4, 5);</span>
+		
+		
+		
+<span class="fc" id="L31">		p1.addCamino(c1); p2.addCamino(c2); p3.addCamino(c3);</span>
+		
+<span class="fc" id="L33">		assertEquals(15, Camino.getCosteTotal());</span>
+		
+<span class="fc" id="L35">		Camino.setCoste(costePrevio);</span>
+		
+<span class="fc" id="L37">	}</span>
+	
+	@Test
+	public void testToString() {
+<span class="fc" id="L41">		Posada p1 = new Posada(&quot;VIPS&quot;, 7);</span>
+<span class="fc" id="L42">		Posada p2 = new Posada(&quot;Aldi&quot;, 8);</span>
+<span class="fc" id="L43">		Camino c1 = new Camino(p1, p2, 6);</span>
+<span class="fc" id="L44">		assertEquals(c1.toString(), &quot;(VIPS--6--&gt;Aldi)&quot;);</span>
+<span class="fc" id="L45">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span>src (24 sept 2024 19:08:29)</div></body></html>

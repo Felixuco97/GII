@@ -1,0 +1,16 @@
+CUESTIONES:
+	
+	1) Ejecuta los tests cambiando los parámetros y modifica los operadores de las operaciones dentro de las clases Producto y División. ¿Qué sucede?
+	
+	Si se modifican los operadores de las operaciones, se ejecutarán operaciones distintas a las
+	del producto y la división, por tanto no saldrán los resultados esperados y los tests fallarán
+	
+	Si se modifican los parámetros, los resutados dependen de cómo se modifiquen
+	Por ejemplo, si en getDivision y getProducto cambio de orden los parámetros, los tests no
+	varían, ya que el orden de los operandos no altera el resultado
+	
+	2) Implementa estas mismas pruebas unitarias con JUnit5. ¿En qué consisten los cambios fundamentales entre las versiones de JUnit4 y JUnit5?
+	
+	Para ejecutar tests en JUnit5 hay que importar los paquetes org.junit.jupiter.api.Assertions y
+	org.junit.jupiter.api.Test, y para ejecutar tests en JUnit4, hay que importar el paquetes
+	org.junit.Assert y org.junit.Test

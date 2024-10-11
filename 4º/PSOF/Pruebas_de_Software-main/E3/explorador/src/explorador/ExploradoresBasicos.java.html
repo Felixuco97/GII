@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>ExploradoresBasicos.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">src (24 sept 2024 19:08:29)</a> &gt; <a href="../../index.html" class="el_group">explorador</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">explorador</a> &gt; <span class="el_source">ExploradoresBasicos.java</span></div><h1>ExploradoresBasicos.java</h1><pre class="source lang-java linenums">package explorador;
+
+import java.io.*;
+
+<span class="nc" id="L5">public class ExploradoresBasicos {</span>
+
+	public static void main(String[] args) {
+		
+<span class="nc" id="L9">		Posada pA = new Posada(&quot;A&quot;, 3);</span>
+<span class="nc" id="L10">		Posada pB = new Posada(&quot;B&quot;, 10);</span>
+<span class="nc" id="L11">		Posada pC = new Posada(&quot;C&quot;); // , 2);</span>
+<span class="nc" id="L12">		Posada pD = new Posada(&quot;D&quot;, 1); </span>
+<span class="nc" id="L13">		Posada pE = new Posada(&quot;E&quot;, 3);</span>
+<span class="nc" id="L14">		Posada pF = new Posada(&quot;F&quot;, 0);</span>
+<span class="nc" id="L15">		Posada[] posadas = { pA, pB, pC, pD, pE, pF};</span>
+<span class="nc" id="L16">		pA.addCamino( new Camino(pA, pB, 1));</span>
+<span class="nc" id="L17">		pA.addCamino( new Camino(pA, pC, 5));</span>
+<span class="nc" id="L18">		pB.addCamino( new Camino(pB, pD, 7));</span>
+<span class="nc" id="L19">		pB.addCamino( new Camino(pB, pE, 4));</span>
+<span class="nc" id="L20">		pC.addCamino( new Camino(pC, pD, 6));</span>
+<span class="nc" id="L21">		pC.addCamino( new Camino(pC, pE, 8));</span>
+<span class="nc" id="L22">		pD.addCamino( new Camino(pD, pF, 3));</span>
+<span class="nc" id="L23">		pE.addCamino( new Camino(pE, pF, 0));</span>
+		/*
+        pA.addCaminoOldVersionRemoved(pB, 1); 
+        pA.addCaminoOldVersionRemoved(pC, 5);
+        pB.addCaminoOldVersionRemoved(pD, 7); 
+        pB.addCaminoOldVersionRemoved(pE, 4);
+        pC.addCaminoOldVersionRemoved(pD, 6); 
+        pC.addCaminoOldVersionRemoved(pE, 8);
+        pD.addCaminoOldVersionRemoved(pF, 3);
+        pE.addCaminoOldVersionRemoved(pF, 0);
+        */
+<span class="nc bnc" id="L34" title="All 2 branches missed.">        for (Posada p : posadas) { System.out.println(p); }</span>
+<span class="nc" id="L35">        Explorador e1 = new Explorador(&quot;Marco&quot;, 15, pB); </span>
+<span class="nc" id="L36">        Explorador e2 = new Explorador(&quot;Maria&quot;, 10, pA);</span>
+<span class="nc" id="L37">        System.out.println(e1);</span>
+<span class="nc bnc" id="L38" title="All 2 branches missed.">        if ( e1.recorre( pA.getCamino(0) ) )  System.out.println(e1);</span>
+<span class="nc" id="L39">        else System.out.println(&quot;e1: no avanza&quot;);</span>
+<span class="nc" id="L40">        System.out.println(e2);</span>
+<span class="nc" id="L41">        System.out.println( pA.getCamino(1) );</span>
+<span class="nc" id="L42">        System.out.println( pC.getCamino(0) );</span>
+<span class="nc" id="L43">        System.out.println( e2.recorre( pA.getCamino(1)) ); System.out.println(e2);</span>
+<span class="nc" id="L44">        System.out.println( e2.recorre( pC.getCamino(0)) );</span>
+<span class="nc" id="L45">        System.out.println(e2);</span>
+        
+        try {
+<span class="nc" id="L48">        	System.out.println(&quot;--&quot;);</span>
+<span class="nc" id="L49">        	new Simulacion(&quot;src/explorador/POSADAS.csv&quot;, &quot;src/explorador/CAMINOS.csv&quot;, &quot;src/explorador/EXPLORADOR.csv&quot;);</span>
+<span class="nc" id="L50">        } catch (IOException e) { System.out.println(&quot;Error en archivos&quot;); }</span>
+        
+
+<span class="nc" id="L53">        Posada solana = new Posada(&quot;Solana&quot;, 1);</span>
+<span class="nc" id="L54">        Posada romeral = new Posada(&quot;Romeral&quot;, 5); </span>
+<span class="nc" id="L55">        Posada tomelloso = new Posada(&quot;Tomelloso&quot;); // por defecto energ�a recuperada 2</span>
+<span class="nc" id="L56">        Explorador sancho = new Explorador(&quot;Sancho&quot;, 50, solana);</span>
+<span class="nc" id="L57">        solana.addCamino(new Camino(solana, romeral, 68));</span>
+<span class="nc" id="L58">        solana.addCamino(new Camino(solana, tomelloso, 33));</span>
+<span class="nc" id="L59">        System.out.println(sancho);</span>
+<span class="nc" id="L60">        sancho.recorre(romeral, tomelloso); // ir� directo a tomelloso sin pasar por romeral</span>
+<span class="nc" id="L61">        System.out.println(sancho); // energ�a  19 = 50 - 33  + 2</span>
+<span class="nc" id="L62">        tomelloso.addCamino(new Camino(tomelloso, romeral, 11));</span>
+<span class="nc" id="L63">        sancho.recorre(tomelloso.getCamino(romeral)); // getCaminoHacia</span>
+<span class="nc" id="L64">        System.out.println(sancho); // en Romeral con energ�a 13 = 19 - 11  + 5</span>
+
+        /* objetos especiales */
+        
+<span class="nc" id="L68">	}</span>
+}
+
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span>src (24 sept 2024 19:08:29)</div></body></html>
